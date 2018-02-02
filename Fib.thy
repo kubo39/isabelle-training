@@ -17,4 +17,9 @@ lemma fib_test1: "fib 1 = 1" by simp
 lemma fib_test2: "fib (Suc 1) = 2" by simp
 lemma fib_test3: "fib (Suc (Suc 1)) = 3" by simp
 
+theorem fib_thy: "fib n \<ge> 1"
+  apply(induction n rule:fib.induct)
+  apply(auto)
+  done
+
 end
