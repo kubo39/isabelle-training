@@ -17,4 +17,6 @@ lemma test_sum: "sum 1 = 1" by simp
 lemma test_sum2: "sum (Suc 1) = 3" by simp
 lemma test_sum3: "sum (Suc (Suc 1)) = 6" by simp
 
+theorem sum_thy: "\<forall>n :: nat. sum (Suc n) > sum n" by simp
+
 end
